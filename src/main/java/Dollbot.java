@@ -1,5 +1,6 @@
 
 import io.github.cdimascio.dotenv.Dotenv;
+import listeners.MusicPlayerListener;
 import listeners.MyEventListener;
 import listeners.test;
 import net.dv8tion.jda.api.JDA;
@@ -19,6 +20,7 @@ public class Dollbot {
         builder.setActivity(Activity.playing("Test"));
         builder.addEventListeners(new test());
         builder.addEventListeners(new MyEventListener());
+        builder.addEventListeners(new MusicPlayerListener());
         try {
             JDA jda = builder.build();
             jda.awaitReady();

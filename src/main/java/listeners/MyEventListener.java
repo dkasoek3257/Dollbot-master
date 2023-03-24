@@ -56,7 +56,7 @@ public class MyEventListener extends ListenerAdapter {
                             .addField("소환사명", summoner.getName(), false)
                             .addField("레벨", Integer.toString(summoner.getLevel()), false)
                             .addField("아이콘 ID", Integer.toString(summoner.getProfileIconId()), false);
-                    event.getChannel().sendMessageEmbeds(builder.build()).queue();
+                    channel.sendMessageEmbeds(builder.build()).queue();
 
 //                String response = String.format("%s\n%s\n%s (Level %d, Icon ID %d)", tier,winlose,summoner.getName(), summoner.getLevel(), summoner.getProfileIconId());
 //                channel.sendMessage(response).queue();
